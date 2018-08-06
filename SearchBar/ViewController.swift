@@ -14,22 +14,23 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var foodArray = [Food]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func setUpFood(){
+        foodArray.append(Food(name: "Hot Dog", type: FoodType(rawValue: "American")!, image: "<hotdog>"))
+        foodArray.append(Food(name: "Steak Frites", type: FoodType(rawValue: "French")!, image: "<steakfrites>"))
     }
-
 }
 
 class Food {
     let name: String
     let type: FoodType
-    
+    let image: String
     
     init(name: String, type: FoodType, image: String){
         self.name = name
