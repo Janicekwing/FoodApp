@@ -33,7 +33,7 @@
                                     </scopeButtonTitles>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="172" id="Tzx-bw-NxR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="172" id="Tzx-bw-NxR" customClass="TableCell" customModule="SearchBar" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="84" width="375" height="172"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tzx-bw-NxR" id="Fhe-NB-75s">
@@ -67,6 +67,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="yIt-DD-gZO" secondAttribute="bottom" constant="10" id="bCK-xW-LUr"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dishName" destination="VFW-ZS-lkJ" id="qkY-Pk-Vdy"/>
+                                            <outlet property="foodImage" destination="yIt-DD-gZO" id="uZ3-d4-qT0"/>
+                                            <outlet property="foodType" destination="fzI-y4-hHz" id="Npu-02-fpX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
