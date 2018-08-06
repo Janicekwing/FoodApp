@@ -14,6 +14,7 @@
 		F064D9E321167A0D00B724C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F064D9E121167A0D00B724C3 /* LaunchScreen.storyboard */; };
 		F064D9EE21167A0D00B724C3 /* SearchBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D9ED21167A0D00B724C3 /* SearchBarTests.swift */; };
 		F064D9F921167A0D00B724C3 /* SearchBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D9F821167A0D00B724C3 /* SearchBarUITests.swift */; };
+		F064DA072119136700B724C3 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064DA062119136700B724C3 /* TableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F064D9F421167A0D00B724C3 /* SearchBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F064D9F821167A0D00B724C3 /* SearchBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarUITests.swift; sourceTree = "<group>"; };
 		F064D9FA21167A0D00B724C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F064DA062119136700B724C3 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				F064D9D821167A0C00B724C3 /* AppDelegate.swift */,
 				F064D9DA21167A0C00B724C3 /* ViewController.swift */,
 				F064D9DC21167A0C00B724C3 /* Main.storyboard */,
+				F064DA062119136700B724C3 /* TableCell.swift */,
 				F064D9DF21167A0D00B724C3 /* Assets.xcassets */,
 				F064D9E121167A0D00B724C3 /* LaunchScreen.storyboard */,
 				F064D9E421167A0D00B724C3 /* Info.plist */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F064DA072119136700B724C3 /* TableCell.swift in Sources */,
 				F064D9DB21167A0C00B724C3 /* ViewController.swift in Sources */,
 				F064D9D921167A0C00B724C3 /* AppDelegate.swift in Sources */,
 			);
