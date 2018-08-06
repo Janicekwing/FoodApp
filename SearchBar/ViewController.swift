@@ -24,6 +24,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
 
+class Food {
+    let name: String
+    let type: FoodType
+    
+    
+    init(name: String, type: FoodType, image: String){
+        self.name = name
+        self.type = type
+        self.image = image
+    }
+}
+
+enum FoodType: String {
+    case french = "French"
+    case american = "American"
+}

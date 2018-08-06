@@ -75,7 +75,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jfc-g5-KWV"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3pr-ck-lxT"/>
                                 </connections>
                             </tableView>
                         </subviews>
