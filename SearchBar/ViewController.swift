@@ -55,9 +55,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {currentFoodArray = foodArray
+            tableView.reloadData()
+            return }
         currentFoodArray = foodArray.filter({ Food -> Bool in
-            guard let text = searchBar.text else { return false }
-            return Food.name.contains(text)
+            Food.name.lowercased().contains(searchText.lowercased())
         })
         tableView.reloadData()
     }
