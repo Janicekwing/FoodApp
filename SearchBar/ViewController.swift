@@ -65,7 +65,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int){
-        
+        switch selectedScope {
+            case 0: currentFoodArray = foodArray
+            case 1: currentFoodArray = foodArray.filter({Food -> Bool in Food.type == FoodType.french})
+            case 2: currentFoodArray = foodArray.filter({Food -> Bool in Food.type == FoodType.american})
+            default: break
+        }
+        tableView.reloadData()
     }
     
 }
