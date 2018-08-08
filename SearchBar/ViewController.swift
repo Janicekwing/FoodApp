@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var searchBar: UISearchBar!
     
     var foodArray = [Food]()
@@ -20,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpFood()
+        setUpSearchBar()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -46,7 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         cell.dishName.text = currentFoodArray[indexPath.row].name
         cell.foodType.text = currentFoodArray[indexPath.row].type.rawValue
-        cell.foodImage.image = UIImage(named:foodArray[indexPath.row].image)
+        cell.foodImage.image = UIImage(named:currentFoodArray[indexPath.row].image)
         return cell
     }
     
@@ -55,13 +55,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        guard !searchText.isEmpty else{
-            currentFoodArray = foodArray
-            return
-        }
-        currentFoodArray.filter({ (Food) -> Bool in
-        Food.name.lowercased().contains(searchText.lowercased())
+        currentFoodArray = foodArray.filter({ Food -> Bool in
+            guard let text = searchBar.text else { return false }
+            return Food.name.contains(text)
         })
+        tableView.reloadData()
     }
     
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int){
@@ -69,7 +67,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
 }
-
 
 
 class Food {
